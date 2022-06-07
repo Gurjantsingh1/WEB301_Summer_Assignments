@@ -2,10 +2,41 @@ html, body{
     margin: 0;
     padding: 0;
 }
-
-@media screen and(min-width: 600px) {
-   image1 { display: none; }
-   }
-   @media screen and(max-width: 600px) {
-    image2 { display: none; }
+ h1{
+     text-align: center;
+     font-size: 70px;
+ }
+ p{
+     text-align: down;
+ }
+@media only screen and (min-width: 600px) {
+    nav a{
+        float: left;
+        display: block;
+        text-align: left;
+        padding: 20px 18px;
+        font-size: 30px;
     }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    nav a{
+        float: center;
+        display: flex;
+        text-align: right;
+        padding: 20px 18px;
+    }
+    
+}
+
+@media only screen and (min-width: 600px) {
+    .potrait{
+        display: none;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .landscape{
+        display: none;
+    }
+}
