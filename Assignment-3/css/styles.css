@@ -20,11 +20,22 @@ color:white;
     display: block; 
     font-size: auto;
 }
-@media screen and (min-width:1050px){
+@media screen and (min-width:500px)and(max-width:850px){
     .content{
-        max-width: 960px;
+        max-width: 200%;
         margin:0 auto;
         display:block;
     }
-    .row{height:15px;}
+}
+
+/* Additional CSS for extra flare */
+body{
+    background-color: lightblue;
+}
+h1{
+    font-size:45px;
+}
+h2{
+    font-size:25px;
+    color: yellow
 }
