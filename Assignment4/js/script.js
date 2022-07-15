@@ -3,17 +3,15 @@
   - 0782841
 */
 $(function () {
+  document.getElementById("location").addEventListener("click",getLocation);
   function getLocation() {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(showPosition, showError);
     } else {
-      document.getElementById("demo").innerHTML =
+      document.getElementById("error").innerHTML =
         "Geolocation is not supported by this browser.";
     }
   }
-
-  getLocation();
-
 });
 
 function showPosition(position) {
