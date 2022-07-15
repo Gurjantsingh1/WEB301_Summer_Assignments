@@ -12,12 +12,19 @@ $(function () {
         "Geolocation is not supported by this browser.";
     }
   }
+
 });
 
 function showPosition(position) {
-  $("#geo-data").html(
-    `Latitude: ${position.coords.latitude} <br>Longitude: ${position.coords.longitude}`
-  );
+  let latitude = position.coords.latitude;
+  let longitude = position.coords.longitude;
+
+let lat = localStorage.getItem('latitude');
+let lon = localStorage.getItem('longitude');
+localStorage.setItem('latitude',latitude);
+localStorage.setItem('longitude',longitude);
+document.getElementById('latitude').value=lat;
+document.getElementById('longitude').value=lon;
 }
 
 function showError(error) {
