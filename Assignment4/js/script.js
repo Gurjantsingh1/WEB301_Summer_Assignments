@@ -26,6 +26,14 @@ localStorage.setItem('longitude',longitude);
 document.getElementById('latitude').value=lat;
 document.getElementById('longitude').value=lon;
 }
+function submit(){
+  let name=document.getElementById('name').value;
+  let Lname=document.getElementById('Lname').value;
+localStorage.setItem('name',name);
+localStorage.setItem('LastName',Lname);
+document.getElementById('success').innerHTML ="Information succesfully submit"
+
+}
 
 function showError(error) {
   console.log("An error occurred: ", error);
